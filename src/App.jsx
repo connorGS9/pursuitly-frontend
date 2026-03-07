@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
@@ -23,6 +24,7 @@ function App() {
                 <Route path="/profile" element={<ProtectedRoute><Layout><Profile /></Layout></ProtectedRoute>} />
                 <Route path="/cover-letter" element={<ProtectedRoute><Layout><CoverLetter /></Layout></ProtectedRoute>} />
             </Routes>
+            <SpeedInsights />
         </BrowserRouter>
     );
 }
